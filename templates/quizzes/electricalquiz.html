@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Electrical Quiz
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="static/quiz//dist/jquery.quiz-min.css">
+{% endblock %}
+
+
+{% block main %}
+    <div id="quiz">
+        <div id="quiz-header">
+          <h1>Electrical Test</h1>
+        </div>
+
+        <div id="quiz-start-screen">
+            <div>
+                <p style= "color:#A52A2A">The Electrical Engineering quiz is a combined quiz from the internal and external links that you have read and studied</p>
+            </div>
+            <p>
+              <a href="#" id="quiz-start-btn" class="quiz-button">Start Test</a>
+            </p>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="/static/quiz/dist/jquery.quiz-min.js"></script>
+    <script src="/static/js/electricalquiz.js"></script>
+{% endblock %}

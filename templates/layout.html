@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src ="/static/jquery.passwordstrength.js"></script>
+
+    <link href="/static/styles.css" rel="stylesheet">
+    {% block css %}{% endblock %}
+
+    <title class = "tab">EngineeringHub: {% block title %}{% endblock %}</title>
+
+    </head>
+    {% if session.user_id %}
+    <body class="backdrop">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-side">
+                     <div class="nav-link-wrapper">
+                        <a href="/profile">My Profile</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="/explore">Explore Texts</a>
+                    </div>
+                </div>
+                <div class="middle">
+                     <div class="nav-link-wrapper">
+                        Welcome to EngHub
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="nav-link-wrapper">
+                        <a href="/quizzes">Quizzes</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="/riddles">Riddles</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+        <body class="backdrop">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="left-side">
+                         <div class="nav-link-wrapper">
+                            <a href="/">ENGHUB</a>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="nav-link-wrapper">
+                            <a href="/register">Register</a>
+                        </div>
+                        <div class="nav-link-wrapper">
+                            <a href="/login">Log In</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+    {% endif %}
+
+    {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+
+         <main class="container p-5">
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer class="footer-text">
+            Designed by <a href="https://github.com/neal2k1">Neal Patel</a> 2020
+        </footer>
+        {% block js %}
+        {% endblock %}
+
+    </body>
+
+
+</html>

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="registration">
+            <div class="returning_user">
+                Welcome Back!
+            </div>
+            <img src="/static/images/blank_profile_picture.jpg" class="picture">
+            <form class="input-group">
+            <input type="text" style="text-align:center"autocomplete="off" class= "input-field" placeholder="Username" name="username">
+            <input type="password" style="text-align:center" autocomplete="off" class= "input-field" placeholder="Password"  name="password">
+            <button type="submit" class="submit-btn">Log In</button>
+        </div>
+    </form>
+
+
+{% endblock %}
+

@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Explore
+{% endblock %}
+
+{% block main %}
+
+    {% if session.user_id %}
+<div class = "content wrapper">
+                <div class="engineering2-types-wrapper">
+
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/aerospace_engineering.jpg"></div>
+
+                        <div class="header2-wrapper">
+                            <div class="engineering3-type">
+                                <a href="/aerospacequiz" style="color: red">Aerospace Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image:url(/static/images/bio_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                <a href="/bioquiz" style="color: darkorange">BioMed Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/chemical_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                <a href="/chemicalquiz" style="color: gold">Chemical Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/civil_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                <a href="/chemicalquiz" style="color: lightgreen">Civil Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/electrical_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+                            <div class="engineering2-type">
+                                <a href="/electricalquiz" style="color: lightblue">Electrical Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/mechanical_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                <a href="/mechanicalquiz" style="color: violet">Mechanical Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/nuclear_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                <a href="/nuclearquiz" style="color: brown">Nuclear Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/software_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                <a href="/softwarequiz" style="color: lightgrey">Software Engineering Test</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    {% block js %}
+    <script>
+        const engineeritems = document.querySelectorAll('.engineering2-type-wrapper')
+
+            engineeritems.forEach(engineeritem => {
+                engineeritem.addEventListener('mouseover', () => {
+                    console.log(engineeritem.childNodes[1].classlist);
+                    engineeritem.childNodes[1].classList.add('img-darken');
+                })
+
+                engineeritem.addEventListener('mouseout', () => {
+                    console.log(engineeritem.childNodes[1].classlist);
+                    engineeritem.childNodes[1].classList.remove('img-darken');
+                })
+
+            })
+
+    </script>
+
+    {% endblock %}
+
+
+    {% endif %}
+
+
+{% endblock %}

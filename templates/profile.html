@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+
+    {% if session.user_id %}
+<div class="slidecontainer">
+  <div class="content">
+  <div class="registration">
+        <div class="profile">
+            <div class="user-profile">
+              <h1>{{user_profile_name}}'s Profile</h1>
+              <img src="/static/images/fox.png" class="picture">
+            </div>
+            <div class = "update-btn">
+              <a href = "/change_user" style ="color:black; font-size:1.4em">Change Username</a>
+            </div>
+            <div class = "update-btn">
+              <a href = "/change_pw" style ="color:black; font-size:1.4em">Change Password</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="slide show" style="background-image: url('static/images/landscape1.jpg');"></div>
+  <div class="slide" style="background-image: url('static/images/landscape2.jpg');"></div>
+  <div class="slide" style="background-image: url('static/images/landscape3.jpg');"></div>
+  <div class="slide" style="background-image: url('static/images/landscape4.jpg');"></div>
+  <div class="slide" style="background-image: url('static/images/landscape5.jpg');"></div>
+</div>
+
+
+    {% block js %}
+    <script>
+      /**
+ * @param  {number} interval (in milliseconds)
+ */
+function cycleBackgrounds(interval) {
+  let index = 0
+
+  const $imageEls = document.querySelectorAll('.slidecontainer .slide') // Get the images to be cycled.
+
+  setInterval(() => {
+    // Get the next index.  If at end, restart to the beginning.
+    index = index + 1 < $imageEls.length ? index + 1 : 0
+
+    // Show the next
+    $imageEls[index].classList.add('show')
+
+    // Find the previous.
+    const previous = index - 1 < 0 ? $imageEls.length - 1 : index - 1;
+
+    // Hide the previous
+    $imageEls[previous].classList.remove('show')
+  }, interval)
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  cycleBackgrounds(5000);
+});
+    </script>
+    {% endblock %}
+
+
+    {% endif %}
+
+
+{% endblock %}
+

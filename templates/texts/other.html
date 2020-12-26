@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Other
+{% endblock %}
+
+{% block main %}
+{% if session.user_id %}
+<div class="slidecontainer">
+  <div class="content">
+  <div class="other">
+        <div class= "otherinfo">
+            Engineers are the core of the economy and roles vary extensively within the field:
+        </div>
+            <div class = "content wrapper">
+                <div class="engineering-types-wrapper">
+
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/aerospace_engineering.jpg"></div>
+
+                        <div class="header-wrapper">
+                            <div class="engineering-type">
+                                Aerospace
+                            </div>
+                            <div class="engineering-explanation">
+                                <a href ="https://nationalcareers.service.gov.uk/job-profiles/aerospace-engineer" style= "color:lightseagreen"> Aero Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image:url(/static/images/bio_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Bio
+                            </div>
+                            <div class="engineering-explanation">
+                                <a href ="https://nationalcareers.service.gov.uk/job-profiles/clinical-engineer" style= "color:lightseagreen"> Bio Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/chemical_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Chemical
+                            </div>
+                            <div class="engineering-explanation">
+                               <a href ="https://nationalcareers.service.gov.uk/job-profiles/chemical-engineer" style= "color:lightseagreen"> Chemical Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/civil_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Civil
+                            </div>
+                            <div class="engineering-explanation">
+                                <a href ="https://nationalcareers.service.gov.uk/job-profiles/civil-engineer" style= "color:lightseagreen"> Civil Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/electrical_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+                            <div class="engineering-type">
+                                Electrical
+                            </div>
+                            <div class="engineering-explanation">
+                                 <a href ="https://nationalcareers.service.gov.uk/job-profiles/electrical-engineer" style= "color:lightseagreen"> Electrical Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/mechanical_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Mechanical
+                            </div>
+                            <div class="engineering-explanation">
+                               <a href ="https://nationalcareers.service.gov.uk/job-profiles/mechanical-engineer" style= "color:lightseagreen"> Mechanical Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/nuclear_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Nuclear
+                            </div>
+                            <div class="engineering-explanation">
+                                 <a href ="https://nationalcareers.service.gov.uk/job-profiles/nuclear-engineer" style= "color:lightseagreen"> Nuclear Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/software_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Software
+                            </div>
+                            <div class="engineering-explanation">
+                                <a href ="https://nationalcareers.service.gov.uk/job-profiles/software-developer" style= "color:lightseagreen"> Software Career Overview</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/collage.jpg)"></div>
+                            <div class="header-wrapper">
+
+                                <div class="engineering-type">
+                                    Roles
+                                </div>
+                                <div class="engineering-explanation">
+                                    There are so many more engineering roles out there why not check them out
+                                    <a href ="https://nationalcareers.service.gov.uk/job-categories/engineering-and-maintenance" style= "color: white"> HERE</a>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+    const engineeritems = document.querySelectorAll('.engineering-type-wrapper')
+
+        engineeritems.forEach(engineeritem => {
+            engineeritem.addEventListener('mouseover', () => {
+                console.log(engineeritem.childNodes[1].classlist);
+                engineeritem.childNodes[1].classList.add('img-darken');
+            })
+
+            engineeritem.addEventListener('mouseout', () => {
+                console.log(engineeritem.childNodes[1].classlist);
+                engineeritem.childNodes[1].classList.remove('img-darken');
+            })
+
+        })
+
+    </script>
+ 
+    {% endif %}
+
+{% endblock %}

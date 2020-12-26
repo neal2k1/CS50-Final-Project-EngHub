@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Intro
+{% endblock %}
+
+{% block main %}
+            <div class = "content wrapper">
+                <div class="engineering-types-wrapper">
+
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/aerospace_engineering.jpg"></div>
+
+                        <div class="header-wrapper">
+                            <div class="engineering-type">
+                                Aerospace
+                            </div>
+                            <div class="engineering-explanation">
+                                Engineering concerned with the development of aircraft and spacecraft. It has two major and overlapping branches: Aeronautical Engineering and Astronautical Engineering
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image:url(/static/images/bio_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Bio
+                            </div>
+                            <div class="engineering-explanation">
+                                Bioengineering involves working with doctors, therapists and researchers to develop systems, equipment and devices in order to solve clinical problems.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/chemical_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Chemical
+                            </div>
+                            <div class="engineering-explanation">
+                                Chemical engineering applys the principles of chemistry, biology, physics, and math to solve problems that involve the production or use of chemicals, fuel, drugs, food, and many other products.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/civil_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Civil
+                            </div>
+                            <div class="engineering-explanation">
+                                Civil engineers create, improve and protect the environment in which we live. They plan, design and oversee construction and maintenance of building structures and infrastructure.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/electrical_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+                            <div class="engineering-type">
+                                Electrical
+                            </div>
+                            <div class="engineering-explanation">
+                                 Electrical engineering involves designing, developing, and testing electrical devices and equipment, including communications systems, power generators, motors and navigation systems, and electrical systems for automobiles and aircraft.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/mechanical_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Mechanical
+                            </div>
+                            <div class="engineering-explanation">
+                                Mechanical engineers design power-producing machines, such as electric generators, internal combustion engines, and steam and gas turbines, as well as power-using machines, such as refrigeration and air-conditioning systems.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/nuclear_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Nuclear
+                            </div>
+                            <div class="engineering-explanation">
+                                 Nuclear engineers research and develop the processes, instruments, and systems used to derive benefits from nuclear energy and radiation.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/software_engineering.jpg)"></div>
+
+                        <div class="header-wrapper">
+
+                            <div class="engineering-type">
+                                Software
+                            </div>
+                            <div class="engineering-explanation">
+                                Software engineering is a branch of computer science which includes the development and building of computer systems software and applications software.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/earth.jpg)"></div>
+                            <div class="header-wrapper">
+
+                                <div class="engineering-type">
+                                    Other
+                                </div>
+                                <div class="engineering-explanation">
+                                    There are so many more engineering roles out there why not check them out.
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+    const engineeritems = document.querySelectorAll('.engineering-type-wrapper')
+
+        engineeritems.forEach(engineeritem => {
+            engineeritem.addEventListener('mouseover', () => {
+                console.log(engineeritem.childNodes[1].classlist);
+                engineeritem.childNodes[1].classList.add('img-darken');
+            })
+
+            engineeritem.addEventListener('mouseout', () => {
+                console.log(engineeritem.childNodes[1].classlist);
+                engineeritem.childNodes[1].classList.remove('img-darken');
+            })
+
+        })
+
+    </script>
+{% endblock %}

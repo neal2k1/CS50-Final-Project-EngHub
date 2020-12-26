@@ -1,0 +1,166 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Explore
+{% endblock %}
+
+{% block main %}
+
+    {% if session.user_id %}
+<div class = "content wrapper">
+                <div class="engineering2-types-wrapper">
+
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/aerospace_engineering.jpg"></div>
+
+                        <div class="header2-wrapper">
+                            <div class="engineering2-type">
+                                Aerospace
+                            </div>
+                            <div class="engineering2-explanation">
+                                <a href="/aerospace" style="color: red">Explore Aerospace Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image:url(/static/images/bio_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                Bio
+                            </div>
+                            <div class="engineering2-explanation">
+                                <a href="/bio" style="color: darkorange">Explore Bio Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/chemical_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                Chemical
+                            </div>
+                            <div class="engineering2-explanation">
+                                <a href="/chemical" style="color: gold">Explore Chemical Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/civil_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                Civil
+                            </div>
+                            <div class="engineering2-explanation">
+                               <a href="/civil" style="color: lightgreen">Explore Civil Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/electrical_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+                            <div class="engineering2-type">
+                                Electrical
+                            </div>
+                            <div class="engineering2-explanation">
+                                 <a href="/electrical" style="color: lightblue">Explore Electrical Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/mechanical_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                Mechanical
+                            </div>
+                            <div class="engineering2-explanation">
+                                <a href="/mechanical" style="color: violet">Explore Mechanical Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/nuclear_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                Nuclear
+                            </div>
+                            <div class="engineering2-explanation">
+                            <a href="/nuclear" style="color: brown">Explore Nuclear Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/software_engineering.jpg)"></div>
+
+                        <div class="header2-wrapper">
+
+                            <div class="engineering2-type">
+                                Software
+                            </div>
+                            <div class="engineering2-explanation">
+                                <a href="/software" style="color: lightgrey">Explore Software Engineering Futher</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class= "engineering2-type-wrapper">
+                        <div class= "engineering-img-background" style="background-image: url(/static/images/earth.jpg)"></div>
+                            <div class="header2-wrapper">
+
+                                <div class="engineering2-type">
+                                    Other
+                                </div>
+                                <div class="engineering2-explanation">
+                                    <a href = "/other" style= "color:pink">Click this to look at other resources online</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    {% block js %}
+    <script>
+        const engineeritems = document.querySelectorAll('.engineering2-type-wrapper')
+
+            engineeritems.forEach(engineeritem => {
+                engineeritem.addEventListener('mouseover', () => {
+                    console.log(engineeritem.childNodes[1].classlist);
+                    engineeritem.childNodes[1].classList.add('img-darken');
+                })
+
+                engineeritem.addEventListener('mouseout', () => {
+                    console.log(engineeritem.childNodes[1].classlist);
+                    engineeritem.childNodes[1].classList.remove('img-darken');
+                })
+
+            })
+
+    </script>
+
+    {% endblock %}
+
+
+    {% endif %}
+
+
+{% endblock %}

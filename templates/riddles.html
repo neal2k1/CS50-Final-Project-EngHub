@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Riddles
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="static/quiz//dist/jquery.quiz-min.css">
+{% endblock %}
+
+
+{% block main %}
+    <div id="quiz">
+        <div id="quiz-header">
+          <h1>Engineering Riddles</h1>
+        </div>
+
+        <div id="quiz-start-screen">
+            <div>
+                <p style= "color:#A52A2A">Try work your way through these riddles, maybe do them with your family and friends beside you to pass the time and learn something new.</p>
+            </div>
+            <p>
+              <a href="#" id="quiz-start-btn" class="quiz-button">Start Test</a>
+            </p>
+        </div>
+    </div>
+    {% if session.user_id %}
+        <!--
+        TODO
+        -->
+    {% endif %}
+
+
+{% endblock %}
+
+{% block js %}
+    <script src="/static/quiz/dist/jquery.quiz-min.js"></script>
+    <script src="/static/js/quiz.js"></script>
+{% endblock %}
+

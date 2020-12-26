@@ -1,0 +1,26 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+{% if session.user_id %}
+    <form action="/change_pw" method="post">
+    <div class="registration">
+        <div class="returning_user">
+                Set a new password!
+            </div>
+            <form class="input-group">
+            <input type="email" style="text-align:center" autocomplete="off" class= "input-field" placeholder="Email"  name="email" >
+            <input type="text" style="text-align:center"autocomplete="off" class= "input-field" placeholder="Current password" name="oldpassword">
+            <input type="password" style="text-align:center" autocomplete="off" class= "input-field" placeholder="Password"  name="password">
+            <input type="password" style="text-align:center" autocomplete="off" class= "input-field" placeholder="Retype -Password"  name="confirmation">
+            <button type="submit" class="submit-btn">Save</button>
+    </div>
+
+    </form>
+    {% endif %}
+
+{% endblock %}

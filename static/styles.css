@@ -1,0 +1,488 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.backdrop{
+    background: rgb(187,10,217);
+    background: #FFEBCD;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side{
+    display: flex;
+
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 1em;
+    width:100%;
+    height:auto;
+    text-transform: uppercase;
+}
+
+.nav-wrapper > .middle > div {
+    width:100%;
+    height:auto;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    font-family: Apple Chancery, cursive;
+    font-style: italic;
+}
+
+.middle{
+    display: flex;
+
+}
+
+.nav-link-wrapper{
+    height: 20px;
+    border-bottom: 0.5px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: grey;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid black;
+}
+.nav-link-wrapper a:hover{
+    color: grey;
+}
+
+.right-side{
+    display: flex;
+
+}
+
+.nav-wrapper > .right-side > div {
+    margin-left: 20px;
+    font-size: 1em;
+    width:100%;
+    height:auto;
+    text-transform: uppercase;
+}
+
+.engineering-types-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.engineering-type-wrapper{
+    position: relative;
+}
+
+.engineering-img-background{
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+
+}
+
+.header-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.engineering-type{
+    font-size: 1.7em;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.header-wrapper .engineering-explanation{
+    transition: 1s;
+    color: transparent;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+.header-wrapper:hover .engineering-explanation{
+    font-weight: 400;
+    font-size: 0.9em;
+    color: lightseagreen;
+}
+
+.img-darken{
+    transition: 1s;
+    filter: brightness(20%);
+}
+.footer-text {
+    line-height: 100px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+
+.registration {
+    width: 500px;
+    height: 650px;
+    position: relative;
+    margin: 6% auto;
+    background: rgb(0,255,205);
+    background: #DEB887;
+    padding: 5px;
+}
+
+.returning_user{
+    color: black;
+    font-size: 1.7em;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.picture{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.input-group{
+    top:180px;
+    position:absolute;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.input-field{
+    width:100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-top: 10px;
+    border-bottom: 10px;
+    border-left:0;
+    border-right: 0;
+    outline: none;
+    background: rgb(0,255,205);
+    background: linear-gradient(142deg, rgba(233,145,21,1) 9%, rgba(163,160,156,1) 38%, rgba(163,160,156,1) 62%, rgba(218,150,72,1) 90%);
+
+}
+
+span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background: white;
+}
+
+span .fa{
+    padding: 10px;
+    color: black;
+}
+.submit-btn{
+    width: 85%;
+    padding: 12px 20px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #d5dbda;
+    border: 0;
+    margin: 40px;
+    outline: none;
+    border-radius: 30px;
+
+}
+
+::placeholder{
+    color: white;
+}
+
+.error {
+display: block;
+width: 90%;
+height: auto;
+margin-left: auto;
+margin-right:auto;
+
+}
+
+.password-strength-indicator{
+    font-size: 12px;
+    display: inline-block;
+    height: 15px;
+    min-width: 20%;
+    text-align: center;
+    transition: 1s;
+    margin: 50px 0;
+
+}
+
+.user-profile{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 1.4em;
+}
+
+.slidecontainer {
+  height: cover;
+  position: relative;
+  width: 100%;
+}
+
+.slidecontainer .slide {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  z-index: -1;
+}
+
+.slidecontainer .slide.show {
+  opacity: 1;
+}
+
+
+.engineering2-types-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.engineering2-type-wrapper{
+    position: relative;
+}
+
+.header2-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.engineering2-type{
+    font-size: 3em;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.header2-wrapper .engineering2-explanation{
+    transition: 1s;
+    color: transparent;
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.header2-wrapper:hover .engineering2-explanation{
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #FFEBCD;
+}
+
+.engineeringborder {
+    width: 100%;
+    height: relative;
+    position: relative;
+    background: rgb(0,255,205);
+    background: #DEB887;
+    padding: 5px;
+}
+
+.engineering_explore_texts{
+    font-size: 1.5em;
+    color: black;
+    padding: 5pc;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.aerotextheader{
+    font-size: 1.2em;
+    color:white;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: darkred;
+}
+
+.biotextheader{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: darkorange;
+}
+
+.chemtextheader{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: gold;
+}
+
+.civiltextheader{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: lightgreen;
+}
+
+.electricaltextheader{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: lightblue;
+}
+
+.mechtextheader{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: violet;
+}
+
+.nucleartextheader{
+    font-size: 1.2em;
+    color:white;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: brown;
+}
+
+.softwaretextheader{
+    font-size: 1.2em;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    background-color: lightgrey;
+}
+
+.textblock1{
+    font-weight: bold;
+    color: white;
+}
+
+.engprofile{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 1.4em;
+    background: rgb(0,255,205);
+    background: linear-gradient(142deg, rgba(233,145,21,1) 9%, rgba(163,160,156,1) 38%, rgba(163,160,156,1) 62%, rgba(218,150,72,1) 90%);
+
+}
+
+.furtherinformation{
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.TestTime{
+    Text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: rgb(0,255,205);
+    background: linear-gradient(142deg, rgba(233,145,21,1) 9%, rgba(163,160,156,1) 38%, rgba(163,160,156,1) 62%, rgba(218,150,72,1) 90%);
+
+}
+.update-btn{
+    width: 85%;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #FFEBCD;
+    border: 0;
+    margin: 40px;
+    outline: none;
+    border-radius: 30px;
+}
+
+.engineering3-type{
+    font-size: 3em;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+.other {
+    width: 80%;
+    height: 70%;
+    position: relative;
+    margin: 6% auto;
+    background: rgb(0,255,205);
+    background: #DEB887;
+
+}
+
+.otherinfo{
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+.infoimage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+
+}
